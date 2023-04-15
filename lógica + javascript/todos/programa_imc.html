@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script >
+	function pulaLinha() {
+			document.write("<br>");
+		}	
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+		}
+		function calculaimc(altura, peso) {
+
+			return peso / (altura * altura);
+		}
+
+		var nome = prompt("informe seu nome")
+		var alturaInformada = prompt(nome + "Informe sua altura ");
+		var pesoInformado = prompt(nome + "Informe seu peso ")
+		var imc = calculaimc(alturaInformada, pesoInformado);
+
+		mostra(nome + ", o seu imc calculado é " + imc );
+
+if(imc < 18.5) {
+		mostra("Você está abaixo do recomendado")
+	}
+
+	if(imc > 35 ){
+		mostra("Você está acima do recomendado")
+	}
+// nesse caso abaixo, para retornar o IF eu preciso de ou (false, ou true)  esse && significa literalmente 'E', ou seja se o imc for maior que 18.5 e menor que 35 faça tal coisa..   exemplo idiota: "só vou no cinema se não estiver chovendo e eu tiver dinheiro"
+if(imc >= 18.5 && imc <= 35){
+		
+	mostra("Seu Imc está excelente")
+
+		
+	}
+
+
+
+</script>

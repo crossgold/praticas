@@ -1,0 +1,62 @@
+<html>
+<head>
+  <style>
+    #teste {
+      left: 10px;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      position: absolute;
+      border: 1px solid black
+    }
+
+    #divInsideDiv_Child {
+      top: 0;
+      left: 8px;
+      margin: 0;
+      padding: 10px;
+      width: 300px;
+      position: relative;
+      border: 1px solid black
+    }
+
+    #divInsideDiv_Parent {
+      top: 200;
+      left: 30px;
+      margin: 0;
+      padding: 0px;
+      width: 400px;
+      position: absolute;
+      border: 1px solid red
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <div id="teste">
+    <p>Clique no botão para verificar o offsetLeft da div de id teste.</p>
+    <p><button onclick="myFunction('teste', 'span')">Verificar</button></p>
+    <p>offsetLeft é: <span id="span"></span></p>
+  </div>
+
+
+  <div id="divInsideDiv_Parent">
+    <div id="divInsideDiv_Child">
+      <p>Clique no botão para verificar o offsetLeft da div filha.</p>
+      <p><button onclick="myFunction('divInsideDiv_Child', 'span2')">Verificar</button></p>
+      <p>offsetLeft é: <span id="span2"></span></p>
+    </div>
+  </div>
+
+  <script>
+    function myFunction(divId, spanId) {
+      var testDiv = document.getElementById(divId);
+      document.getElementById(spanId).innerHTML = testDiv.offsetLeft;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script >
+	function pulaLinha() {
+			document.write("<br><br>");
+		}	
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+		}
+		//parseint é um código javascript que converte *string* em texto, ou seja o prompt sempre abre uma caixa perguntando ao usuário algum "parametro" dentro disso, qualquer coisa inserida vai ser sempre um "texto, mesmo que seja número", usando o parseint antes, garante que aquilo vai ser guardado como número, e não texto
+		// mesmo nesse caso     var a = parseInt("10");   o parseint transforma essa string em número, ele converte qualquer string em numero, então daria certo..
+		var vitorias = parseInt(prompt("Entre com o número de vitórias."));
+		var empates = parseInt(prompt("Entre com o número de empates."));
+		var pontos = (vitorias * 3) + empates;
+
+		mostra("Os pontos do seu time são " + pontos);
+
+		//esse 28 é apenas um exemplo de número aleatório atrelado ao time..
+		if (pontos > 28) {
+			mostra("Seu time está melhor do que no ano passado.")
+		}
+
+		if (pontos < 28) {
+			mostra("Seu time está pior do que no ano passado.")
+		}
+		if (pontos == 28) {
+			mostra("Seu time está igual ao ano passado")
+		}
+
+
+</script>

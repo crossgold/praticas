@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+Esse vai ser uma aula para testar variaveis e funções
+
+<br>
+<br>
+
+<script>
+	function pulaLinha () {
+
+		document.write("<br><br>")
+
+	}
+
+	function mostra (frase){   //repare que aqui a função recebe "frase" é como se a função fosse um saco de jujubas, e precisa de parametros (conteudo) então eu declarei, junto com document.write esse conteudo, ai toda vez que mando um mostra ("xxx")  o javascript interpleta : frase = "xxx" e imprime na tela..confuso né
+
+		document.write(frase);
+		pulaLinha();
+
+	}
+
+	
+
+ 	var coxinha = "comer coxinha";
+
+	mostra("Henrique gosta de " + coxinha);
+	
+	mostra("Lavei não gosta de " + coxinha);
+	
+	coxinha = "kibexinha";
+
+	mostra("Henrique gosta de comer também "+ coxinha)
+	
+	document.write("__________________________________________________________________________");
+	pulaLinha()
+	var idadeHenrique = 33;
+	var idadeRyu = 7;
+	var idadeSimone = 52;
+	var media = (idadeHenrique + idadeSimone + idadeRyu)/3;
+	var familia = "Familia avilez";
+
+	mostra("A média das idades é "+ Math.round(media));
+		mostra("A idade média da " + familia + "é" + Math.round(media));
+
+
+
+</script>

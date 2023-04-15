@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<script >
+	function pulaLinha() {
+			document.write("<br>");
+		}	
+		function mostra(frase){
+			document.write(frase);
+			pulaLinha();
+		}
+		function calculaimc(altura, peso) {
+			var imc = peso / (altura * altura);
+			return imc;
+		}
+// function calculaImc(altura, peso) {
+//    return peso / (altura * altura);
+//  }
+//  mostra("O meu IMC é " + calculaImc(1.63, 48));   outro jeito no qual pode se fazer a função acima, em vez de declarar váriavel, já puxa o "altura, peso) calcula dentro da função e chama o return da função!"
+
+	var imcHenrique = calculaimc(1.92, 110);
+	//mostra("O imc do henrique é " + Math.round(imcHenrique))
+
+	var imcSimone = calculaimc(1.73, 70);
+
+	var totalImc = imcHenrique + imcSimone;
+//	var totalImc = calculaimc(1.92, 110) + calculaimc(1.73, 70);
+//  em vez de criar 2 var para declarar Henrique e simone, posso usar a var totalImc e apenas inserir os dados, e chamar a função calculaImc
+
+
+
+	mostra("O total dos dois imc é " + totalImc);
+
+
+
+</script>

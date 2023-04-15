@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<canvas width="600" height="400">  </canvas>
+
+<script>
+
+		var tela = document.querySelector('canvas');
+		// esse getcontext está falando que tipo de perfil vamos criar, ou seja dentro dessa tela branco, o que vamos desenhar é 2d, poderia ser 3d.. é um comando que funciona com o <canvas>, esse pincel, esse pincel é um pincel 'invisivel' ou seja, só o programa que usa ele, não o usuário
+		var pincel = tela.getContext('2d');
+
+        //fillstyle é como se fosse uma varíavel, que pinta, ela não precisa ser declarada pois é do próprio javascript
+		pincel.fillStyle = 'lightgrey'
+        // esse fillrect é 'prencher onde o primeiro 0 é x o 2º é y e os outros são altura e largura
+		pincel.fillRect(0, 0, 600, 400);
+
+		pincel.fillStyle = 'green'
+		pincel.fillRect(0, 0, 200, 400)
+
+		pincel.fillStyle = 'red'
+		pincel.fillRect(400,0,400,400)
+
+		pincel.fillStyle = 'yellow'
+		pincel.beginPath();   //bom o nome já fala 'começar o caminho'
+		pincel.moveTo (300,200); //mover para
+		pincel.lineTo (200,400);
+		pincel.lineTo (400,400);
+		pincel.fill()  // eu declarei o fill style como yellow, logo quando chamo a função fill, ele puxa o valor do fill style, igual puxar uma action ()
+
+	    pincel.fillStyle = 'blue';
+   		pincel.beginPath();
+    	pincel.arc(300, 200, 50, 0, 2 * 3.14);
+    	pincel.fill();
+
+
+
+/*Para que pudéssemos construir esta imagem, precisamos conhecer a função getContext(), fillRect(), lineTo(), beginPath(), a propriedade fillStyle, a esse conjunto de propriedades damos o nome de APIs, ou bibliotecas. Aqui, estamos manipulando a API específica para a criação de gráficos.  Para descobrirmos estas bibliotecas, temos que pesquisar pela documentação da linguagem na internet, utilizando os termos "canvas 2d api". */
+		
+
+	
+
+
+</script>
